@@ -1,0 +1,163 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <!-- Page Header -->
+  {% set fname= 'img/' + post.img_file %}
+  <header class="masthead card" style="background-image: url('{{ url_for('static', filename= fname) }}')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>{{post.title}}</h1>
+            <h2 class="subheading">{{post.tagline}}</h2>
+            <span class="meta">Posted by
+              <a href="#">Admin</a>
+              on {{post.date}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+
+  <article >
+
+    <div class="container card" >
+      <div class="row" style="background-color:white;">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+
+</p>
+          
+          {{post.content}}
+         
+         
+
+
+
+          
+                
+                   <!-- <h3>Comments</h2>
+                    <p>hey 
+                    {% for comment in comments %} 
+                        <p>{{comment.cbody}}</p>
+                    {% endfor %}
+                    
+                    </p>
+                -->
+<br>
+<br>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+<br>
+
+<div class="container card"  style="background-color:white;">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+
+</p>
+
+
+          <h2>Comments <div class="middle ">
+      <a class="bttn" href="https://www.facebook.com">
+        <i class="fab fa-facebook-f" ></i>
+      </a>
+      <a class="bttn" href="#">
+        <i class=" fab fa-twitter"></i>
+        
+      </a>
+      <a class="bttn" href="#">
+        <i class="fab fa-google"></i>
+      </a>
+      <a class="bttn" href="#">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="bttn" href="#">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div></h2>
+<p>
+
+</p>
+                    
+          {% for comment in comments %}
+            <div class="cborder">
+             <p><b>{{comment.cname}}</b></p><div class="cpadding">
+              {% if k %}
+
+              <div class="w3-container float-right "dpadding" >
+                <a href="/cdelete/{{comment.cno}}"><i class="fa fa-trash"></i>
+                </a></div>
+
+              {% endif %}
+              <p>  {{ comment.cbody }}</p></div>
+             
+
+            </div>
+          <p>
+
+          </p>
+          {% endfor %}
+
+
+
+
+
+ 
+
+  </div>
+      </div>
+    </div>
+
+
+
+
+  <div class="container card"  style="background-color:white;">
+      <div class="row" >
+        <div class="col-lg-8 col-md-10 mx-auto">
+<p>
+
+</p>
+
+
+  <form name="sentMessage" id="contactForm" action = "/post/{{post.slug}}" method="post" novalidate>
+    <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label></label>
+                <textarea rows="5" class="form-control" placeholder="Comment Here" name = "comment_box" id="comment_box" required data-validation-required-message="Please enter a comment."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Name" id="usrname" name='usrname' required data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">SUBMIT</button>
+            </div>
+          </form>
+
+  </div>
+      </div>
+    </div>
+
+
+   
+
+  {% endblock %}

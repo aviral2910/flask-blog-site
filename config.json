@@ -1,0 +1,23 @@
+{
+  "params":
+  {
+    "local_Server":"True",
+    "local_uri":"mysql://root:@localhost/space gang",
+    "prod_uri":"mysql://root:@localhost/space gang",
+    "fb_url":"https://facebook.com/beyond_space",
+    "tw_url":"https://twitter.com/beyond_space",
+    "gh_url":"https://github.com/beyond_space",
+    "blog_name":"Moonlight",
+    "tagline": "Explore the Unexplored",
+    "gmail-user": "xyz@gmail.com",
+    "gmail-password":"gmail password",
+    "about_text": "Space is the boundless three-dimensional extent in which objects and events have relative position and direction.[1] Physical space is often conceived in three linear dimensions, although modern physicists usually consider it, with time, to be part of a boundless four-dimensional continuum known as spacetime. The concept of space is considered to be of fundamental importance to an understanding of the physical universe. However, disagreement continues between philosophers over whether it is itself an entity, a relationship between entities, or part of a conceptual framework.",
+    "no_of_posts":2,
+    "login_image":"login.jpg",
+    "login_background":"login_background.jpg",
+    "admin_user": "space",
+    "admin_password":"light",
+    "upload_location": "C:\\Users\\avira\\PycharmProjects\\blog_site\\static\\img"
+  }
+
+}
